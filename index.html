@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тест2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="wrap d-flex">
+        <div class="map-wrap">
+        <div id="map"></div>
+        </div>
+        <div id="right-panel">
+        <div>
+            <label for="start"><b>Start:</b></label>
+            <div class="input-group">
+                <input id="start" type="text" class="form-control">
+            </div>
+            <br>
+            <label for="waypoints"><b>Waypoints:</b><small><i>(not necessary)</i></small></label>
+            <div class="input-group">
+                <input id="waypoints" type="text" class="form-control">
+            </div>
+            <br>
+            <label for="end"><b>End:</b></label>
+            <div class="input-group">
+                <input id="end" type="text" class="form-control">
+        </div>
+        <br>
+          <button type="button" id="submit" class="btn btn-success">Go!</button> 
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Start</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">End</th>
+                    <th scope="col">Distance</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        </div>
+    </div>
+<script src="https://maps.googleapis.com/maps/api/js?&key=[YOUR KEY]&libraries=places&callback=createMap"
+async defer></script>
+<script src="script.js"></script>      
+</body>
+</html>
